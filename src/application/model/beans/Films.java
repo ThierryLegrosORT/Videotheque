@@ -2,17 +2,19 @@ package application.model.beans;
 
 public class Films {
 	
-	public Films(int id, String titre, String genre) {
+	private int annee;
+	private int id;
+	private String titre;
+	private String genre;
+
+	public Films(int id, String titre, String genre, int annee) {
 		super();
 	this.id = id;
 	this.titre = titre;
 	this.genre = genre;
+	this.annee = annee;
 	}
-	
-	private int id;
-	private String titre;
-	private String genre;
-	
+		
 	public Films() {
 		
 	}
@@ -40,5 +42,18 @@ public class Films {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-	
+
+	public int getAnnee() {
+		return annee;
+	}
+
+	public void setAnnee(int annee) {
+		this.annee = annee;
+	}
+
+	@Override
+	public String toString() {
+		return "id: " + id + ", " + titre + ", " + genre+", année: "+annee;
+	}
+		
 }

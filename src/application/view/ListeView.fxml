@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="510.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ListViewControler">
+   <children>
+      <HBox layoutY="32.0" prefHeight="478.0" prefWidth="681.0">
+         <children>
+            <TableView fx:id="video" prefHeight="510.0" prefWidth="597.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="44.0" text="Id" />
+                <TableColumn fx:id="titre" prefWidth="330.0" text="Titre" />
+                  <TableColumn fx:id="genre" prefWidth="151.0" text="Genre" />
+                  <TableColumn fx:id="annee" prefWidth="71.0" text="Année" />
+              </columns>
+            </TableView>
+            <VBox alignment="TOP_RIGHT" prefHeight="510.0" prefWidth="80.0">
+               <children>
+                  <Button fx:id="lister" defaultButton="true" mnemonicParsing="false" onAction="#listeTable" prefHeight="25.0" prefWidth="75.0" text="Lister">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="chercher" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="25.0" prefWidth="75.0" text="Chercher">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="ajouter" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="75.0" text="Ajouter">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="supprimer" mnemonicParsing="false" onAction="#remove" prefHeight="25.0" prefWidth="75.0" text="Supprimer">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="editer" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Editer">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="quitter" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Quitter">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TextField fx:id="tf" editable="false" prefHeight="32.0" prefWidth="681.0" promptText="Tapez un titre ou une partie du titre" text="*" visible="false" />
+   </children>
+</AnchorPane>

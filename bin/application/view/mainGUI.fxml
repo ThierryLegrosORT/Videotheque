@@ -26,14 +26,15 @@
                   </Label>
                   <TextField fx:id="tf" prefHeight="25.0" prefWidth="250.0" promptText="Taper le titre ou mot clé avec une Maj" />
                   <Button fx:id="search" mnemonicParsing="false" onAction="#onButtonClick" text="Search" />
-                  <Button fx:id="add" mnemonicParsing="false" onAction="#add" text="Add" />
-                  <Button fx:id="remove" mnemonicParsing="false" onAction="#remove" text="Remove" />
+                  <Button fx:id="close" mnemonicParsing="false" onAction="#close" text="Fermer" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="titre" prefHeight="118.0" prefWidth="373.0" text="titre" />
-                  <Label fx:id="genre" prefHeight="100.0" prefWidth="129.0" text="genre" />
+                  <Label fx:id="titre" prefHeight="100.0" prefWidth="503.0" text="titre">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font></Label>
                </children>
             </HBox>
          </children>

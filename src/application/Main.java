@@ -14,16 +14,19 @@ public class Main extends Application {
 		try {
 			
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("View/mainGUI.fxml"));
+			loader.setLocation(Main.class.getResource("View/ListeView.fxml"));
+			//loader.setLocation(Main.class.getResource("View/mainGUI.fxml"));
 			AnchorPane root = (AnchorPane) loader.load();
-			
+						
 			Scene sc1 = new Scene(root);
 			primaryStage.setScene(sc1);
 			primaryStage.show();
 		
 		
-		} catch(Exception e) {
-			e.printStackTrace();
+		}
+		catch(Exception e) {
+			System.out.println(e.getLocalizedMessage());
+			
 		}
 	}
 	
